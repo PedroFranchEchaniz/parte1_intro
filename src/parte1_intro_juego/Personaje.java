@@ -4,22 +4,23 @@ import java.util.Arrays;
 
 public class Personaje {
 
-	String nombre;
-	int vida;
-	int score;
-	int puntosFuerza;
-	String[] mochila = new String [10];
+	private String nombre;
+	private int vida;
+	private int score;
+	private int puntosFuerza;
+	public String[] mochila = new String [10];
 	
 	public Personaje() {
 		super();
 	}
 
-	public Personaje(String nombre, int vida, int score, String[] mochila) {
+	public Personaje(String nombre, int vida, int score, String[] mochila, int puntosFuerza) {
 		super();
 		this.nombre = nombre;
 		this.vida = vida;
 		this.score = score;
 		this.mochila = mochila;
+		this.puntosFuerza = puntosFuerza;
 	}
 
 	public String getNombre() {
@@ -53,8 +54,16 @@ public class Personaje {
 	public void setMochila(String[] mochila) {
 		this.mochila = mochila;
 	}
-
 	
+	
+	public int getPuntosFuerza() {
+		return puntosFuerza;
+	}
+
+	public void setPuntosFuerza(int puntosFuerza) {
+		this.puntosFuerza = puntosFuerza;
+	}
+
 	public String toString() {
 		return "Personaje [nombre=" + nombre + ", vida=" + vida + ", score=" + score + ", mochila="
 				+ Arrays.toString(mochila) + "]";

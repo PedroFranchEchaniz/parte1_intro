@@ -3,7 +3,7 @@ package parte1_intro_juego;
 public class Batalla {	
 	
 
-	public static Personaje ganarpelea (Personaje p1, Personaje p2) {
+	public static Personaje pelear (Personaje p1, Personaje p2) {
 		int n = 0;
 		int m = 3;
 		int golpe = (int) (Math.floor(Math.random()*(n-m+1)+m));
