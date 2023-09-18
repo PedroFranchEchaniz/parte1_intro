@@ -7,6 +7,7 @@ public class Personaje {
 	String nombre;
 	int vida;
 	int score;
+	int puntosFuerza;
 	String[] mochila = new String [10];
 	
 	public Personaje() {
