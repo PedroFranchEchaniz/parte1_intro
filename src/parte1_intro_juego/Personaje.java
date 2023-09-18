@@ -62,7 +62,7 @@ public class Personaje {
 	public String agregarPocion (String botiquin) {
 		String mensaje = "botiquin agregada correctamente";
 		for(String m : mochila) {
-			if (m == null)
+			if (m.isEmpty())
 			m = botiquin;
 			else 
 				mensaje= "YA NO PUEDES CONSEGUIR MÁS ELEMENTOS PUES TU MOCHILA ESTÁ COMPLETA";
@@ -85,7 +85,15 @@ public class Personaje {
 		return vida;
 	}
 	
-	
+	public void curar () {
+		for( int i = 0; i<mochila.length; i++) {
+			if(mochila[i].contentEquals("botiquin")) {
+				System.out.println("Te has curado");
+			}else {
+				System.out.println("no tienes botiquines");
+			}
+		}
+	}
 	
 	
 	
