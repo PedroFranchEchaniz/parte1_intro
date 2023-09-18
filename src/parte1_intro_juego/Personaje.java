@@ -53,25 +53,36 @@ public class Personaje {
 		this.mochila = mochila;
 	}
 
-	@Override
+	
 	public String toString() {
 		return "Personaje [nombre=" + nombre + ", vida=" + vida + ", score=" + score + ", mochila="
 				+ Arrays.toString(mochila) + "]";
 	}
 	
-	public String agregarPocion (String pocion) {
-		String mensaje = "Poción agregada correctamente";
+	public String agregarPocion (String botiquin) {
+		String mensaje = "botiquin agregada correctamente";
 		for(String m : mochila) {
 			if (m == null)
-			m = pocion;
+			m = botiquin;
 			else 
 				mensaje= "YA NO PUEDES CONSEGUIR MÁS ELEMENTOS PUES TU MOCHILA ESTÁ COMPLETA";
 		}
 		return mensaje;
 	}
 	
-	public void recibirGolpe (int golpe) {
-		
+	public void agregarPocion2 (String botiquin) {
+		for (int i = 0; i<mochila.length; i++) {
+			if(mochila[i].isEmpty()) {
+				mochila[i]=botiquin;
+			}else {
+				System.out.println("La mochila esta llena");
+			}
+		}
+	}
+	
+	public int recibirGolpe (int golpe) {
+		vida -= golpe;
+		return vida;
 	}
 	
 	
